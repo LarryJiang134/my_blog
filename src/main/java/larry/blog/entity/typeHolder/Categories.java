@@ -1,12 +1,13 @@
 package larry.blog.entity.typeHolder;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by hangyanjiang on 2017/6/15.
  */
+
+@Entity
+@Table(name = "categories")
 public class Categories {
 
     @Id
@@ -17,4 +18,22 @@ public class Categories {
     @Column(name = "category_name")
     private String categoryName;
 
+    public Categories() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
 }
