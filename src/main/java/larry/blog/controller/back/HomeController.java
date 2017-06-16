@@ -21,7 +21,7 @@ public class HomeController {
     @Autowired
     private BlogService blogService;
 
-    @RequestMapping("/")
+    @RequestMapping("/home")
     public String home(Model theModel) {
 
         // get customers from the service
