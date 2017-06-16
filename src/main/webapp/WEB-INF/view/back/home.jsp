@@ -48,22 +48,23 @@
             </tr>
 
             <!-- loop over and print out customers -->
-            <c:forEach var="tempCustomer" items="${customers}">
+            <c:forEach var="tempBlog" items="${blog_list}">
 
                 <!-- construct an "update" link with customer od -->
                 <c:url var="updateLink" value="/customer/showFormForUpdate">
-                    <c:param name="customerId" value="${tempCustomer.id}" />
+                    <c:param name="customerId" value="${tempBlog.id}" />
                 </c:url>
 
                 <!-- construct an "delete" link with customer od -->
                 <c:url var="deleteLink" value="/customer/delete">
-                    <c:param name="customerId" value="${tempCustomer.id}" />
+                    <c:param name="customerId" value="${tempBlog.id}" />
                 </c:url>
 
                 <tr>
-                    <td> ${tempCustomer.firstName} </td>
-                    <td> ${tempCustomer.lastName} </td>
-                    <td> ${tempCustomer.email} </td>
+                    <td> ${tempBlog.id} </td>
+                    <td> ${tempBlog.title} </td>
+                    <td> ${tempBlog.category} </td>
+                    <td> ${tempBlog.createTime}</td>
 
                     <td>
                         <!-- display the update link -->

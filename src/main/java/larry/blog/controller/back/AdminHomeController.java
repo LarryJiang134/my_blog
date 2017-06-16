@@ -5,6 +5,7 @@ import larry.blog.service.interf.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -15,13 +16,13 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/admin")
-public class HomeController {
+public class AdminHomeController {
 
     // need to inject our customer service
     @Autowired
     private BlogService blogService;
 
-    @RequestMapping("/home")
+    @GetMapping("/home")
     public String home(Model theModel) {
 
         // get customers from the service
@@ -30,7 +31,7 @@ public class HomeController {
         // add the customers to the model
         theModel.addAttribute("blog_list", theBlogs);
 
-        return "/back/home";
+        return "back/home";
     }
 
 }

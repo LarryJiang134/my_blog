@@ -28,7 +28,7 @@ public class BlogDAOImpl implements BlogDAO {
 
         // create a query ... sort by id
         Query<Blog> theQuery =
-                currentSession.createQuery("from Blog order by id",
+                currentSession.createQuery("from Blog b where b.category < 3",
                         Blog.class);
 
         // execute query and get result list

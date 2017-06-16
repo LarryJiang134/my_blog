@@ -17,10 +17,10 @@ public class TestDbServlet extends javax.servlet.http.HttpServlet {
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws ServletException, IOException {
 
         // setup connection variable
-        String user = "springstudent";
-        String pass = "springstudent";
+        String user = "root";
+        String pass = "19940921";
 
-        String jdbcUrl = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false";
+        String jdbcUrl = "jdbc:mysql://localhost:3306/larry_blog?useSSL=false";
         String driver = "com.mysql.jdbc.Driver";
 
         // get connection to database

@@ -7,7 +7,7 @@ import java.util.List;
  * Created by hangyanjiang on 2017/6/15.
  */
 
-@Entity
+//@Entity
 @Table(name = "users")
 public class User {
 

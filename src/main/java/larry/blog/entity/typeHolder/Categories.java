@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by hangyanjiang on 2017/6/15.
  */
 
-@Entity
+//@Entity
 @Table(name = "categories")
 public class Categories {
 

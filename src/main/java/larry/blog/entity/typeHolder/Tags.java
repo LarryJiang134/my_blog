@@ -1,12 +1,13 @@
 package larry.blog.entity.typeHolder;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by hangyanjiang on 2017/6/15.
  */
+
+//@Entity
+@Table(name = "tags")
 public class Tags {
 
     @Id
