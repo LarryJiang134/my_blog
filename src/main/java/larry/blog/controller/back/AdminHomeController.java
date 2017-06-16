@@ -66,7 +66,7 @@ public class AdminHomeController {
         // test
         System.out.println(">> save called");
 
-        return "redirect:/home";
+        return "redirect:/admin/home";
     }
 
 
