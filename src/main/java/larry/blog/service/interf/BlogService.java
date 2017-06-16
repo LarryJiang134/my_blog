@@ -11,5 +11,8 @@ public interface BlogService {
 
     public List<Blog> getBlogs();
 
+    public Blog getBlog(int theId);
+
+    public void saveBlog(Blog theBlog);
 
 }

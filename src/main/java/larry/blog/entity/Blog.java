@@ -41,6 +41,9 @@ public class Blog {
     private Integer viewCount;
 
     public Blog() {
+
+        updateTime=new Date();
+
     }
 
     public Integer getId() {
@@ -113,5 +116,20 @@ public class Blog {
 
     public void setViewCount(Integer viewCount) {
         this.viewCount = viewCount;
+    }
+
+    @Override
+    public String toString() {
+        return "Blog{" +
+                "id=" + id +
+                ", category=" + category +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", description='" + description + '\'' +
+                ", author='" + author + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", viewCount=" + viewCount +
+                '}';
     }
 }

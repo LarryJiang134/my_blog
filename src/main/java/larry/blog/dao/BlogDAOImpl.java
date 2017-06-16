@@ -28,7 +28,7 @@ public class BlogDAOImpl implements BlogDAO {
 
         // create a query ... sort by id
         Query<Blog> theQuery =
-                currentSession.createQuery("from Blog b where b.category < 3",
+                currentSession.createQuery("from Blog order by createTime",
                         Blog.class);
 
         // execute query and get result list
@@ -37,6 +37,24 @@ public class BlogDAOImpl implements BlogDAO {
         // return the results
         return blog_list;
 
+    }
+
+    public Blog getBlog(int theId) {
+        // get the current hibernate session
+        Session currentSession = sessionFactory.getCurrentSession();
+
+        // now retrieve/read from database using the primary key
+        Blog theBlog = currentSession.get(Blog.class, theId);
+
+        return theBlog;
+    }
+
+    public void saveBlog(Blog theBlog) {
+        // get current hibernate session
+        Session currentSession = sessionFactory.getCurrentSession();
+
+        // save/update the customer ... finally LOL
+        currentSession.saveOrUpdate(theBlog);
     }
 
 }

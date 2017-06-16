@@ -25,4 +25,14 @@ public class BlogServiceImpl implements BlogService {
         return blogDAO.getBlogs();
     }
 
+    @Transactional
+    public Blog getBlog(int theId) {
+        return blogDAO.getBlog(theId);
+    }
+
+    @Transactional
+    public void saveBlog(Blog theBlog) {
+        blogDAO.saveBlog(theBlog);
+    }
+
 }

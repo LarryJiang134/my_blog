@@ -29,7 +29,7 @@ DROP TABLE IF EXISTS `blogs`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `blogs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `category` varchar(15) DEFAULT 'Blog',
+  `category` int(11) NULL,
   `title` varchar(40) NOT NULL,
   `content` longtext NOT NULL,
   `description` varchar(500) NOT NULL,
@@ -47,7 +47,8 @@ CREATE TABLE `blogs` (
 LOCK TABLES `blogs` WRITE;
 /*!40000 ALTER TABLE `blogs` DISABLE KEYS */;
 INSERT INTO `blogs` VALUES 
-	(1,'Blog','Test','Test ## Hello World !!!','This is a Test blog','Larry Jiang','2017-06-15 19:57:17','2017-06-15 16:29:56',100);
+	(1,1,'Test1','Test ## Hello World !!!','This is a Test blog','Larry Jiang','2017-06-15 19:57:17','2017-06-15 16:29:56',100),
+    (2,2,'Test2','Test ## Hello World !!!','This is a Test blog','Larry Jiang','2017-06-15 19:57:17','2017-06-16 17:31:03',100);
 /*!40000 ALTER TABLE `blogs` ENABLE KEYS */;
 UNLOCK TABLES;
 
