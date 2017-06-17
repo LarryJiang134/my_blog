@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -45,7 +46,7 @@ public class AdminHomeController {
 
         theModel.addAttribute("blog", theBlog);
 
-        return "back/blog_edit";
+        return "back/blog_add";
     }
 
     @GetMapping("/blog_edit")
@@ -54,6 +55,8 @@ public class AdminHomeController {
 
         // get the blog from the service
         Blog theBlog = blogService.getBlog(theId);
+
+        theBlog.setUpdateTime(new Date());
 
         // set blog as a model attribute to pre-populate the form
         theModel.addAttribute("blog", theBlog);

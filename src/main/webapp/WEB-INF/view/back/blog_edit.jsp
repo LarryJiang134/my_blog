@@ -45,13 +45,6 @@
             <td><form:input path="title" /></td>
         </tr>
 
-
-        <tr>
-            <td><label>AUTHOR:</label></td>
-            <td><form:input path="author" /></td>
-        </tr>
-
-
         <tr>
             <td><label>CATEGORY:</label></td>
             <td><form:input path="category" /></td>
@@ -65,16 +58,6 @@
         <tr>
             <td><label>CONTENT:</label></td>
             <td><form:input path="content" /></td>
-        </tr>
-
-        <tr>
-            <td><label>CREATED_TIME:</label></td>
-            <td><form:input path="createTime" /></td>
-        </tr>
-
-        <tr>
-            <td><label>VIEWCOUNT:</label></td>
-            <td><form:input path="viewCount" /></td>
         </tr>
 
         <tr>

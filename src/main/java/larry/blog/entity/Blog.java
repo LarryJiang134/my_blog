@@ -1,5 +1,6 @@
 package larry.blog.entity;
 
+import javax.validation.constraints.*;
 import larry.blog.service.interf.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -23,9 +24,13 @@ public class Blog {
     private int category;
 
     @Column(name = "title")
+    @NotNull(message = "is required")
+    @Size(min=1, message = "is required")
     private String title;
 
     @Column(name = "content")
+    @NotNull(message = "is required")
+    @Size(min=1, message = "is required")
     private String content;
 
     @Column(name = "description")
@@ -44,6 +49,14 @@ public class Blog {
     private Integer viewCount;
 
     public Blog() {
+        this.category = 1;
+        this.title = "";
+        this.content = "";
+        this.description = "";
+        this.viewCount = 0;
+        this.author = "Larry Jiang";
+        this.createTime = new Date();
+        this.updateTime = new Date();
     }
 
     /*
