@@ -44,26 +44,22 @@
                 <td><label>TITLE:</label></td>
                 <td>
                     <form:input path="title" />
-                    <form:errors path="title" cssClass="error" />
                 </td>
             </tr>
 
             <tr>
                 <td><label>CATEGORY:</label></td>
-                <td><form:input path="category" />
-                    <form:errors path="category" cssClass="error" /></td>
+                <td><form:input path="category" /></td>
             </tr>
 
             <tr>
                 <td><label>DESCRIPTION:</label></td>
-                <td><form:input path="description" />
-                    <form:errors path="description" cssClass="error" /></td>
+                <td><form:input path="description" /></td>
             </tr>
 
             <tr>
                 <td><label>CONTENT:</label></td>
-                <td><form:input path="content" />
-                    <form:errors path="content" cssClass="error" /></td>
+                <td><form:input path="content" /></td>
             </tr>
 
             <tr>

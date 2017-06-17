@@ -44,6 +44,10 @@ public class AdminHomeController {
         // create model attribute to bind form data
         Blog theBlog = new Blog();
 
+        // test
+        System.out.println(">> new blog is: \n" +
+                theBlog);
+
         theModel.addAttribute("blog", theBlog);
 
         return "back/blog_add";
@@ -55,8 +59,6 @@ public class AdminHomeController {
 
         // get the blog from the service
         Blog theBlog = blogService.getBlog(theId);
-
-        theBlog.setUpdateTime(new Date());
 
         // set blog as a model attribute to pre-populate the form
         theModel.addAttribute("blog", theBlog);

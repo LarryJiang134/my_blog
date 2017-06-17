@@ -16,21 +16,21 @@ import java.util.Date;
 public class Blog {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
 
     @Column(name = "category")
-    private int category;
+    private Integer category;
 
     @Column(name = "title")
-    @NotNull(message = "is required")
-    @Size(min=1, message = "is required")
+    //@NotNull(message = "is required")
+    //@Size(min=1, message = "is required")
     private String title;
 
     @Column(name = "content")
-    @NotNull(message = "is required")
-    @Size(min=1, message = "is required")
+    //@NotNull(message = "is required")
+    //@Size(min=1, message = "is required")
     private String content;
 
     @Column(name = "description")
@@ -49,12 +49,6 @@ public class Blog {
     private Integer viewCount;
 
     public Blog() {
-        this.category = 1;
-        this.title = "";
-        this.content = "";
-        this.description = "";
-        this.viewCount = 0;
-        this.author = "Larry Jiang";
         this.createTime = new Date();
         this.updateTime = new Date();
     }
@@ -80,11 +74,11 @@ public class Blog {
         this.id = id;
     }
 
-    public int getCategory() {
+    public Integer getCategory() {
         return category;
     }
 
-    public void setCategory(int category) {
+    public void setCategory(Integer category) {
         this.category = category;
     }
 

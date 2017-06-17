@@ -34,7 +34,7 @@
 
         <!-- put new button: new blog -->
         <input type="button" value="NEW BLOG"
-               onclick="window.location.href='blogAdd'; return false;"
+               onclick="window.location.href='blog_add'; return false;"
                class="add-button"
         />
 
