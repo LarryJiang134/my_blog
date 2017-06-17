@@ -44,9 +44,9 @@ public class Blog {
     private Integer viewCount;
 
     public Blog() {
-        this(0, null, null, null, null, new Date(), new Date(), 0);
     }
 
+    /*
     public Blog(int category, String title, String content, String description, String author, Date createTime, Date updateTime, Integer viewCount) {
         this.category = category;
         this.title = title;
@@ -57,6 +57,7 @@ public class Blog {
         this.updateTime = updateTime;
         this.viewCount = viewCount;
     }
+    */
 
     public Integer getId() {
         return id;

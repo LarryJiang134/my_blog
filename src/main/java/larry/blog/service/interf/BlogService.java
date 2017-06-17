@@ -15,4 +15,5 @@ public interface BlogService {
 
     public void saveBlog(Blog theBlog);
 
+    public void deleteBlog(int theId);
 }

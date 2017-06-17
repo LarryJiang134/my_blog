@@ -35,4 +35,9 @@ public class BlogServiceImpl implements BlogService {
         blogDAO.saveBlog(theBlog);
     }
 
+    @Transactional
+    public void deleteBlog(int theId) {
+        blogDAO.deleteBlog(theId);
+    }
+
 }

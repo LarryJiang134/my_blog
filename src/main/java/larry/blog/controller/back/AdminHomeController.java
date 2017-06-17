@@ -30,6 +30,10 @@ public class AdminHomeController {
         // add the blog to the model
         theModel.addAttribute("blog_list", theBlogs);
 
+        for (Blog blog: theBlogs) {
+            System.out.println(blog);
+        }
+
         return "back/home";
     }
 
@@ -66,5 +70,14 @@ public class AdminHomeController {
         return "redirect:/admin/home";
     }
 
+    @GetMapping("/blog_delete")
+    public String deleteCustomer(@RequestParam("blogId") int theId) {
+
+        // delete the blog
+        blogService.deleteBlog(theId);
+
+        return "redirect:/admin/home";
+
+    }
 
 }

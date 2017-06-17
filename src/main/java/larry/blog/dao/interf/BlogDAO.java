@@ -14,4 +14,6 @@ public interface BlogDAO {
     public Blog getBlog(int theId);
 
     public void saveBlog(Blog theBlog);
+
+    public void deleteBlog(int theId);
 }

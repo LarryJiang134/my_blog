@@ -57,4 +57,16 @@ public class BlogDAOImpl implements BlogDAO {
         currentSession.saveOrUpdate(theBlog);
     }
 
+    public void deleteBlog(int theId) {
+        // get the current hibernate session
+        Session currentSession = sessionFactory.getCurrentSession();
+
+        // delete object from database with primary key
+        Query theQuery =
+                currentSession.createQuery("delete from Blog where id=:blogId");
+        theQuery.setParameter("blogId", theId);
+
+        theQuery.executeUpdate();
+    }
+
 }
