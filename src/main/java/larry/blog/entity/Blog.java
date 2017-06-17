@@ -1,5 +1,8 @@
 package larry.blog.entity;
 
+import larry.blog.service.interf.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -41,9 +44,18 @@ public class Blog {
     private Integer viewCount;
 
     public Blog() {
+        this(0, null, null, null, null, new Date(), new Date(), 0);
+    }
 
-        updateTime=new Date();
-
+    public Blog(int category, String title, String content, String description, String author, Date createTime, Date updateTime, Integer viewCount) {
+        this.category = category;
+        this.title = title;
+        this.content = content;
+        this.description = description;
+        this.author = author;
+        this.createTime = createTime;
+        this.updateTime = updateTime;
+        this.viewCount = viewCount;
     }
 
     public Integer getId() {

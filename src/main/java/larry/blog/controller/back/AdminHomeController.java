@@ -63,9 +63,6 @@ public class AdminHomeController {
         // save the blog using the service
         blogService.saveBlog(theBlog);
 
-        // test
-        System.out.println(">> save called");
-
         return "redirect:/admin/home";
     }
 
