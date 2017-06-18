@@ -51,19 +51,24 @@
             <!-- loop over and print out customers -->
             <c:forEach var="tempBlog" items="${blog_list}">
 
-                <!-- construct an "update" link with customer od -->
+                <!-- construct a link to blog -->
+                <c:url var="selectLink" value="/blog/show">
+                    <c:param name="blogId" value="${tempBlog.id}" />
+                </c:url>
+
+                <!-- construct an "update" link with blog od -->
                 <c:url var="editLink" value="/admin/blog_edit">
                     <c:param name="blogId" value="${tempBlog.id}" />
                 </c:url>
 
-                <!-- construct an "delete" link with customer od -->
+                <!-- construct an "delete" link with blog od -->
                 <c:url var="deleteLink" value="/admin/blog_delete">
                     <c:param name="blogId" value="${tempBlog.id}" />
                 </c:url>
 
                 <tr>
                     <td> ${tempBlog.id} </td>
-                    <td> ${tempBlog.title} </td>
+                    <td> <a href="${selectLink}">${tempBlog.title}</a></td>
                     <td> ${tempBlog.category} </td>
                     <td> ${tempBlog.createTime}</td>
 
